@@ -36,4 +36,25 @@
          anchors.add('h1:not(.no-anchor), h2:not(.no-anchor), h3:not(.no-anchor), h4:not(.no-anchor), h5:not(.no-anchor), h6:not(.no-anchor)');
       });
     </script>
+    
+
+
+<!-- Event snippet for click-sign-up-btn conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(app.pulumi.com) {
+  var callback = function () {
+    if (typeof(app.pulumi.com) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-808392319/Qh1PCMDUmpMBEP-svIED',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+
+
 </head>
